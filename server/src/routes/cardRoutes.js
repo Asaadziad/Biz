@@ -5,15 +5,15 @@ const {
   updateCard,
   deleteCard,
 } = require("../controllers/cardsController");
-const { authenticate } = require("../middlewares/authMiddleware");
+const { authneticate } = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
 router
   .route("/")
-  .post(authenticate, createCard)
-  .get(authenticate, readCard)
-  .put(authenticate, updateCard)
-  .delete(authenticate, deleteCard);
+  .post(authneticate, createCard)
+  .get(authneticate, readCard)
+  .put(authneticate, updateCard)
+  .delete(authneticate, deleteCard);
 
 module.exports = router;

@@ -6,6 +6,7 @@ const cardSchema = mongoose.Schema({
   address: String,
   phone: String,
   image: String,
+  isVip: Boolean,
 });
 
 module.exports = mongoose.model("Card", cardSchema);
